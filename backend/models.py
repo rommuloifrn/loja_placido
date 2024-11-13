@@ -10,3 +10,7 @@ class Cliente(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Endereco(models.Model):
+    local = models.CharField(max_length=100)
+    numero = models.IntegerField()

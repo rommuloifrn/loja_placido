@@ -8,6 +8,7 @@ from drf_yasg import openapi
 
 router = DefaultRouter()
 router.register(r'clientes', views.ClienteViewSet)
+router.register(r'enderecos', views.EnderecoViewSet)
 
 schema_view = get_schema_view(
     openapi.Info(

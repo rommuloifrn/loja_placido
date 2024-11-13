@@ -5,3 +5,8 @@ class ClienteSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Cliente
         fields = '__all__'
+
+class EnderecoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Endereco
+        fields = '__all__'
