@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from rest_framework.routers import DefaultRouter
 from rest_framework import permissions
 from backend import views
@@ -28,4 +28,9 @@ urlpatterns = [
     path('', include(router.urls)),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+    
+    re_path('login', views.MeuUsuarioViewSet.login),
+    re_path('signup', views.MeuUsuarioViewSet.signup),
+    re_path('test_token', views.MeuUsuarioViewSet.test_token)
+    
 ]
